@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace overrideing 
+{
+    class baseClass
+    {
+        public virtual void Greetings()
+        {
+            Console.WriteLine("Executed in Baseclass");
+        }
+    }
+    class subClass : baseClass
+    {
+        public override void Greetings()
+        {
+            base.Greetings();
+            Console.WriteLine("Executed in Subclass");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            baseClass obj1 = new subClass( );
+            obj1.Greetings();
+            Console.ReadLine();
+        }
+    }
+}
