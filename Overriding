@@ -1,0 +1,34 @@
+using System;
+namespace Overriding1
+{
+    class baseClass
+    {
+        public virtual void greeting()
+        {
+            Console.WriteLine("Assigned the value a and b");
+            
+        }
+    }
+    class subclass : baseClass
+    {
+        public override void greeting()
+        {
+            int a = 5;
+            int b = 3;
+            base.greeting();
+            int c = a + b;
+            Console.WriteLine("c="+c);
+        }
+    }
+
+    class program
+    {
+
+        // Main Method
+        public static void Main()
+        {
+            subclass obj1 = new subclass();
+            obj1.greeting();
+        }
+    }
+}
