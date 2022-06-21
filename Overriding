@@ -1,32 +1,45 @@
 using System;
 namespace Overriding1
 {
-    class baseClass
+
+    // Base class
+    class baseclass
     {
+
+        // data members
+       public int a;
+       public int b;
+
+        // public method of base class
         public virtual void greeting()
         {
-            Console.WriteLine("Assigned the value a and b");
-            
-        }
-    }
-    class subclass : baseClass
-    {
-        public override void greeting()
-        {
-            int a = 5;
-            int b = 3;
-            base.greeting();
-            int c = a + b;
-            Console.WriteLine("c="+c);
+            Console.WriteLine("Assigned the values a nd b");
+            a = 5;
+            b = 10;
         }
     }
 
+    // inheriting the GFG class using :
+    class subclass: baseclass 
+    {
+
+        // constructor of derived class
+        public override void  greeting()
+        {
+ 	         base.greeting();
+             int c = a + b;
+             Console .WriteLine("c="+c);
+        }
+    }
+
+    // Driver class
     class program
     {
 
         // Main Method
-        public static void Main()
+        static void Main(string[] args)
         {
+
             subclass obj1 = new subclass();
             obj1.greeting();
         }
