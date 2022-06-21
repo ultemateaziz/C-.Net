@@ -1,0 +1,91 @@
+Public Class Form1
+
+    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
+
+    Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Operation.Click
+
+    End Sub
+
+    Private Sub ButtonClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click, Button0.Click, Button2.Click, Button3.Click, Button4.Click, Button5.Click, Button6.Click, Button7.Click, Button8.Click, Button9.Click, ButtonPlus.Click, ButtonC.Click, ButtonCE.Click, ButtonDivison.Click, ButtonMinus.Click, ButtonMultiple.Click, Button10.Click
+        Dim button As Button = CType(sender, Button)
+        If button.Name = "Button1" Then
+            TextBox1.Text = TextBox1.Text + "1"
+        End If
+
+        If button.Name = "Button2" Then
+            TextBox1.Text = TextBox1.Text + "2"
+        End If
+
+        If button.Name = "Button3" Then
+            TextBox1.Text = TextBox1.Text + "3"
+        End If
+
+        If button.Name = "Button4" Then
+            TextBox1.Text = TextBox1.Text + "4"
+        End If
+
+        If button.Name = "Button5" Then
+            TextBox1.Text = TextBox1.Text + "5"
+        End If
+
+        If button.Name = "Button6" Then
+            TextBox1.Text = TextBox1.Text + "6"
+        End If
+
+        If button.Name = "Button7" Then
+            TextBox1.Text = TextBox1.Text + "7"
+        End If
+
+        If button.Name = "Button8" Then
+            TextBox1.Text = TextBox1.Text + "8"
+        End If
+
+        If button.Name = "Button9" Then
+            TextBox1.Text = TextBox1.Text + "9"
+        End If
+
+        If button.Name = "Button0" Then
+            TextBox1.Text = TextBox1.Text + "0"
+        End If
+
+        If button.Name = "ButtonMultiple" Then
+            TextBox1.Text = TextBox1.Text + "*"
+        End If
+
+        If button.Name = "ButtonPlus" Then
+            TextBox1.Text = TextBox1.Text + "+"
+        End If
+
+        If button.Name = "ButtonDivison" Then
+            TextBox1.Text = TextBox1.Text + "/"
+        End If
+
+        If button.Name = "ButtonMinus" Then
+            TextBox1.Text = TextBox1.Text + "-"
+        End If
+
+        If button.Name = "ButtonCE" Then
+            TextBox1.Text = ""
+        End If
+
+        If button.Name = "Button10" Then
+            Dim str As String = TextBox1.Text
+            Dim result = New DataTable().Compute(str, Nothing)
+            TextBox1.Text = result
+        End If
+    End Sub
+
+    Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button10.Click
+
+    End Sub
+
+    Private Sub Label1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
+
+    End Sub
+End Class
