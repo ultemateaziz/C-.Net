@@ -1,0 +1,26 @@
+Module Module1
+
+    Sub Main()
+        Dim n(10) As Integer 'Declaration n in array in integer format'
+        Dim i, j As Integer  'Declaration i,j in integer format'
+        Dim second_small As Integer
+        second_small = 0
+        Dim small As Integer
+        small = 0
+        For i = 0 To 10 'first condition check the statement looping for the 10 time'
+            Console.WriteLine(" Enter the value for array value[{0}] : ", i)  'user input array values'
+            n(i) = Console.ReadLine()  ' store the values in n of arry' 
+        Next i
+        For j = 0 To 10 'for array number'
+            Console.WriteLine("Array value({0}) = {1}", j, n(j))
+        Next j
+        Console.WriteLine("Lowest Number To Higher Number")
+        System.Array.Sort(n)
+        For Each str As Integer In n
+            Console.WriteLine(Str)
+        Next
+        Console.WriteLine("Second smallest element in array is: {0}", n(1))
+        Console.ReadKey()
+    End Sub
+
+End Module
